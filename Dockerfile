@@ -11,4 +11,4 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Comando que será executado ao iniciar o container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi:application"]
