@@ -11,7 +11,7 @@ class ReactAppView(TemplateView):
     def get_template_names(self):
         # Adiciona logs para verificar o caminho
         logging.info(f"settings.BASE_DIR: {settings.BASE_DIR}")
-        template_path = Path(settings.BASE_DIR) / "staticfiles" / "index.html"
+        template_path = "frontend/build/index.html"
         logging.info(f"Verificando o caminho do template: {template_path}")
         
         if not template_path.exists():
