@@ -16,7 +16,7 @@ class ReactAppView(TemplateView):
         
         if not template_path.exists():
             raise ValueError(f"Arquivo {template_path} não encontrado. Rode 'npm run build'.")
-        return [str(template_path)]
+        return template_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
